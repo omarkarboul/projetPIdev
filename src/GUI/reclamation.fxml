@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="616.0" prefWidth="714.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ReclamationController">
+   <children>
+      <TableView fx:id="reclamationTable" layoutX="59.0" layoutY="240.0" prefHeight="332.0" prefWidth="643.0">
+         <columns>
+            <TableColumn fx:id="idCol" prefWidth="75.0" style="-fx-alignment: center;" text="id" />
+            <TableColumn fx:id="typeCol" prefWidth="137.00006103515625" style="-fx-alignment: center;" text="type" />
+            <TableColumn fx:id="contenuCol" prefWidth="328.0" style="-fx-alignment: center;" text="contenu" />
+            <TableColumn fx:id="editCol" maxWidth="180.0" prefWidth="101.0" style="-fx-alignment: center;" text="mod/sup" />
+         </columns>
+      </TableView>
+      <Pane layoutX="-3.0" layoutY="100.0" prefHeight="6.0" prefWidth="739.0" style="-fx-background-color: #000;" />
+      <Text fill="#c90d49" layoutX="24.0" layoutY="64.0" onMouseClicked="#getActivites" strokeType="OUTSIDE" strokeWidth="0.0" text="Activité" textAlignment="CENTER" wrappingWidth="210.6708984375">
+         <font>
+            <Font name="Magneto Bold" size="23.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER" layoutX="658.0" layoutY="50.71428680419922" />
+      <FontAwesomeIconView glyphName="CLOSE" layoutX="682.0" layoutY="51.0" onMouseClicked="#close" size="20" wrappingWidth="56.7142858505249" />
+      <HBox alignment="CENTER_LEFT" layoutX="98.0" layoutY="114.0" onMouseClicked="#refresh" prefHeight="100.0" prefWidth="384.0">
+         <children>
+            <FontAwesomeIconView fill="#166dcc" glyphName="PLUS" onMouseClicked="#getAddreclamation" size="45" text="">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#26ae61" glyphName="REFRESH" size="45" />
+            <Button mnemonicParsing="false" onMouseClicked="#sort" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #c4c92c;" text="trier">
+               <font>
+                  <Font name="Magneto Bold" size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#chercher" prefHeight="39.0" prefWidth="135.0" style="-fx-background-color: #c4c92c;" text="chercher">
+               <font>
+                  <Font name="Magneto Bold" size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <TextField fx:id="searchFid" layoutX="495.0" layoutY="149.0" />
+      <Text fill="#a115ab" layoutX="471.0" layoutY="62.0" onMouseClicked="#getreclamations" strokeType="OUTSIDE" strokeWidth="0.0" text="Réclamation" textAlignment="CENTER" wrappingWidth="210.6708984375">
+         <font>
+            <Font name="Magneto Bold" size="23.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
